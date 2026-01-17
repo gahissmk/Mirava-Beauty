@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Connexion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="auth-page">
+<form id="login-form">
+  <h2>Connexion</h2>
+  <input type="email" id="login-email" placeholder="Email" required>
+  <input type="password" id="login-password" placeholder="Mot de passe" required>
+  <button type="submit">Se connecter</button>
+  <p>Pas encore inscrit ? <a href="signup.html">Créer un compte</a></p>
+</form>
+</section>
+<script>
+const loginForm=document.getElementById('login-form');
+loginForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const email=document.getElementById('login-email').value;
+  const pwd=document.getElementById('login-password').value;
+  let users=JSON.parse(localStorage.getItem('users')||'[]');
+  const user=users.find(u=>u.email===email && u.password===pwd);
+  if(user){localStorage.setItem('currentUser',JSON.stringify(user)); alert("Connecté !"); window.location.href="index.html";}
+  else alert("Email ou mot de passe incorrect");
+});
+</script>
+</body>
+</html>

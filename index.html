@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mirava beauty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html"></a></div>
+    <div id="user-controls">
+      <a href="login.html" id="login-btn">Connexion</a>
+      <button onclick="toggleCart()">Panier (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div><a class="" href=""></a></div>
+  </section>
+
+  <H2 class="space-between home">Bienvenue dans le monde de MIRAVA BEAUTY</H2>
+  <div class="search-sort">
+    <input type="text" id="search" placeholder="Rechercher un produit..." oninput="filterProducts()">
+    <select id="sort" onchange="sortProducts()">
+      <option value="">Trier par</option>
+      <option value="asc">Prix croissant</option>
+      <option value="desc">Prix décroissant</option>
+    </select>
+  </div>
+
+  <section class="catalogue" id="catalogue"></section>
+
+  <div class="cart" id="cart">
+    <span class="close-cart" onclick="toggleCart()">✖</span>
+    <h2>Votre Panier</h2>
+    <div id="cart-items"></div>
+    <div>Total: €<span id="cart-total">0</span></div>
+    <button onclick="checkout()">Payer</button>
+  </div>
+
+  <div class="space-between padding30"><a class="color-white" href="">1</a><a class="color-white" href="">2</a><a
+      class="color-white" href="">3</a><a class="color-white" href="">4</a><a class="color-white" href="">5</a><a
+      class="color-white" href="">6</a></div>
+
+  <footer class="flex-center margin-bottom20 padding30 background-dark">
+    <div class="text-center color-white">
+      <p>&copy; 2026 MIRAVA BEAUTY  . Tous droits réservés.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
