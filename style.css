@@ -2,26 +2,26 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url(asset3/sombre.png);
+  background-image: url("./asset3/sombre.png");
   color: #ffffff;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
   background-color: #1f1f1f75;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   width: 50%;
   margin: auto;
-
 }
+
 header .logo {
-  background-image: url(asset3/logo\ final.png);
+  background-image: url("./asset3/logo final.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 150px;
@@ -39,6 +39,7 @@ header button,
   cursor: pointer;
   transition: color 0.3s;
 }
+
 header a:hover,
 header button:hover,
 .profile-btn:hover {
@@ -53,16 +54,25 @@ header button:hover,
   overflow: hidden;
   background-color: #1f1f1f52;
 }
+
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle at center, #ff5050, #1f1f1f);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("./asset3/fondanimemec.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   animation: ripple 8s ease infinite;
-  opacity: 0.3;
-  background-image: url("asset3/fondanimemec.jpeg");
+  opacity: 0.35;
+  z-index: 0;
 }
+
 .hero h1 {
   position: relative;
   font-size: 36px;
@@ -70,16 +80,17 @@ header button:hover,
   z-index: 1;
   color: #f3e9efc8;
   margin-top: 50px;
-  height: auto;
 }
+
 @keyframes glow {
   0% { text-shadow: 0 0 10px #995eb9; }
   100% { text-shadow: 0 0 40px #ffffffe2; }
 }
+
 @keyframes ripple {
-  0% { transform: scale(1); opacity: 0.3;}
-  50% { transform: scale(1.15); opacity: 0.4;}
-  100% { transform: scale(1); opacity: 0.3;}
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 /* SEARCH + TRI */
@@ -89,21 +100,14 @@ header button:hover,
   padding: 0 20px;
   margin-top: 100px;
 }
-.search-sort input {
-  padding: 15px;
-  border-radius: 5px;
-  border: none;
-  background: #1e1e1e;
-  color: #fff;
-  width: 25%;
-}
+
+.search-sort input,
 .search-sort select {
   padding: 15px;
   border-radius: 5px;
   border: none;
   background: #1e1e1e;
   color: #fff;
-  width: 10%;
 }
 
 /* CATALOGUE */
@@ -113,36 +117,30 @@ header button:hover,
   gap: 20px;
   padding: 20px;
 }
+
 .product {
   background: #9a46777a;
   padding: 15px;
   border-radius: 10px;
-  transition: transform 0.3s;
   text-align: center;
   height: 390px;
-
 }
+
 .product img {
   width: 100%;
   border-radius: 8px;
-  transition: transform 0.3s;
 }
-.product img:hover {
-  transform: scale(1.05);
-}
+
 .product button {
   margin-top: 10px;
   padding: 10px 15px;
-  background-image: url(asset3/sombre.png);
+  background-image: url("./asset3/sombre.png");
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
 }
-.product button:hover {
-  background: #E91E77;
-}
+
 
 /* PANIER */
 .cart {
