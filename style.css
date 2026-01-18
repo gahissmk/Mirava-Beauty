@@ -61,7 +61,7 @@ header button:hover,
   background: radial-gradient(circle at center, #ff5050, #1f1f1f);
   animation: ripple 8s ease infinite;
   opacity: 0.3;
-  background-image: url(/asset3/fondanimemec.jpeg);
+  background-image: url("asset3/fondanimemec.jpeg");
 }
 .hero h1 {
   position: relative;
